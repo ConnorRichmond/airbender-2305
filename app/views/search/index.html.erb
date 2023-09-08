@@ -1,0 +1,13 @@
+<h1>Fire Nation Members</h1>
+
+<% @characters.each do |character| %>
+  <div class="character">
+    <h2><%= character.name %></h2>
+    <% if character.photo_url.present? %>
+      <%= image_tag character.photo_url, class: "character-photo" %>
+    <% end %>
+    <p><strong>Allies:</strong> <%= character.allies.present? ? character.allies.join(', ') : 'None' %></p>
+    <p><strong>Enemies:</strong> <%= character.enemies.present? ? character.enemies.join(', ') : 'None' %></p>
+    <p><strong>Affiliations:</strong> <%= character.affiliation.present? ? character.affiliation.join(', ') : 'None' %></p>
+  </div>
+<% end %>

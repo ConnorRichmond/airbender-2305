@@ -8,9 +8,9 @@ class Character
               :affiliation
 
   def initialize(attributes)
-    @id = attributes[:_id]
+    @id = attributes[:id]
     @name = attributes[:name]
-    @photo_url = attributes[:photoUrl]
+    @photo_url = attributes[:photo_url]
     @allies = attributes[:allies]
     @enemies = attributes[:enemies]
     @affiliation = attributes[:affiliation]
