@@ -61,8 +61,9 @@ group :test do
   gem "capybara"
   gem "launchy"
   gem "simplecov"
-  # gem "webmock"
-  # gem "vcr"
+  gem "webmock"
+  gem "vcr"
+  gem "shoulda-matchers"
 end
 
 group :development do
