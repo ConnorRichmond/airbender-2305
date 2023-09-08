@@ -1,4 +1,8 @@
-<h1>Fire Nation Members</h1>
+<h1><%= params[:nation].titleize.gsub('+', ' ') %></h1>
+
+<div class="total-characters">
+  <p>Total number of people who live in the Fire Nation: <%= @total_characters %></p>
+</div>
 
 <% @characters.each do |character| %>
   <div class="character">
