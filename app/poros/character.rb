@@ -11,9 +11,9 @@ class Character
     @id = attributes[:id]
     @name = attributes[:name]
     @photo_url = attributes[:photo_url]
-    @allies = attributes[:allies]
-    @enemies = attributes[:enemies]
-    @affiliation = attributes[:affiliation]
+    @allies = attributes[:allies].is_a?(Array) ? attributes[:allies] : [attributes[:allies]]
+    @enemies = attributes[:enemies].is_a?(Array) ? attributes[:enemies] : [attributes[:enemies]]
+    @affiliation = attributes[:affiliation].is_a?(Array) ? attributes[:affiliation] : [attributes[:affiliation]]
   end
   
 end
